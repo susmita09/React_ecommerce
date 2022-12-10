@@ -1,0 +1,95 @@
+.card {
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  max-width:100%;
+  
+}
+.card:hover {
+  box-shadow: 0 10px 10px -3px;
+}
+.card > .card__image > img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+}
+
+.card__heart {
+  float: right;
+  color: lightgray;
+  cursor: pointer;
+}
+.card__heart:hover {
+  transform: scale(1.1);
+}
+
+.card__details > .title {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1;
+}
+.card__details > .description {
+  font-size: 15px;
+  color: rgb(165, 162, 162);
+}
+.card__details > .span1 {
+  font-weight: bold;
+}
+
+.card__details > .span2 {
+  color: gray;
+  padding-left: 7px;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+.card__details > .span3 {
+  padding-left: 7px;
+  color: rgb(241, 61, 61);
+  font-size: 14px;
+}
+
+.card__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blueviolet;
+}
+
+.card__icons > .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.card__icons > .icon:hover {
+  background-color: #c6e2e2;
+  transform: scale(1.1);
+}
+
+.product__details {
+  position: relative;
+  transition: 0.5s;
+}
+
+.product__details > .card__icons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 20px;
+  opacity: 0;
+}
+
+.card:hover .product__details {
+  transition: 0.5s;
+  transform: translateY(-20%);
+}
+
+.card:hover .product__details > .card__icons {
+  opacity: 1;
+}
